@@ -26,7 +26,8 @@ form.onsubmit = (e) => {
 
 
 var facts = [
-  'fact1',
-  'fact2',
-  'fact3'
+  'Mars is the fourth planet from the Sun',
+  "Mars' nickname is 'The Red Planet'",
+  'The length of a year on Mars is equal to 1.88 Earth years'
+  
 ]
