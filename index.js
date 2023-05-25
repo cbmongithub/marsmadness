@@ -28,4 +28,5 @@ form.onsubmit = (e) => {
 var facts = [
   'fact1',
   'fact2',
+  'fact3'
 ]
