@@ -23,3 +23,9 @@ form.onsubmit = (e) => {
       console.log(data)
     })
 }
+
+
+var facts = [
+  'fact1',
+  'fact2',
+]
