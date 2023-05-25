@@ -17,9 +17,8 @@ form.onsubmit = (e) => {
     .then((data) => {
       let randomNum = Math.floor(Math.random() * data.photos.length)
       let photo = data.photos[randomNum].img_src
-      console.log(image.classList)
-      image.style.display = 'block'
       image.setAttribute('src', photo)
-      console.log(data)
+      image.classList.remove('hidden')
+      image.classList.add('flex')
     })
 }
