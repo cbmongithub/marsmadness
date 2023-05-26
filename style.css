@@ -1,2 +1,9 @@
-#mars-card {
+.datepicker {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ccc;
+  color: white;
+  cursor: auto;
 }
