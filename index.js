@@ -1,4 +1,5 @@
 const API_KEY = 'ZsZLeAaCbDiosbI2g1jiI3BYahv2btDZIAnP8jVT'
+const apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/";
 const date = document.getElementById('date')
 const form = document.getElementById('form')
 const image = document.getElementById('mars-img')
@@ -23,3 +24,15 @@ form.onsubmit = (e) => {
       console.log(data)
     })
 }
+
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    const marsData = data.bodies.filter(body => body.englishName === "Mars");
+    console.log(marsData);
+  })
+  .catch(error => {
+    console.log("Error:", error);
+  });
+
+  
