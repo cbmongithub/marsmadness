@@ -28,9 +28,11 @@ form.onsubmit = (e) => {
 var facts = [
   'Mars is the fourth planet from the Sun',
   "Mars' nickname is 'The Red Planet'",
-  'The length of a year on Mars is equal to 1.88 Earth years',
+  'The length of a year on Mars is equal to 687 Earth days',
   'There are signs of ancient floods on Mars but currently water mostly lives in icy dirt and thin clouds',
-  'Mars has two moons and their names are Phobos and Deimos'
+  'Mars has two moons and their names are Phobos and Deimos',
+  'There are currently two rovers on Mars and their names are Curiosity and Perseverance'
+  
 ]
 fetch(apiUrl)
   .then((response) => response.json())
