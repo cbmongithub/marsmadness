@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="flex flex-row justify-center items-center mt-10">
-      <form id="form">
-        <input class="datepicker py-1.5 px-4 rounded" type="date" id="date" />
-        <button
-          type="submit"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Submit
-        </button>
-      </form>
+    <div class="flex w-full justify-center items-center mt-10">
+        <form id="form">
+          <input class="datepicker py-1.5 px-4 rounded" type="date" id="date" />
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
     <div
       id="mars-card"
@@ -53,6 +54,9 @@
           >
         </div>
       </div>
+    </div>
+    <div id='moon-phase-div' class="hidden flex flex-row justify-center items-center mt-10">
+      <img alt="Moon phase image" class="rounded-md shadow-lg" id="moon-phase" />
     </div>
 
     <script src="index.js"></script>
