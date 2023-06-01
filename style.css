@@ -1,10 +1,14 @@
+* {
+  scroll-behavior: smooth;
+}
+
 .datepicker {
   width: auto;
   height: auto;
   padding: 5px;
   margin: 5px;
-  background-color: #ccc;
-  color: white;
+  background-color: #fff;
+  color: #000;
   cursor: auto;
 }
 
