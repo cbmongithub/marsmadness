@@ -48,4 +48,13 @@ fetch(apiUrl)
   xhr.setRequestHeader('Authorization', `Basic ${authString}`)
 
   xhr.send(data)
-}
+
+var button = document.getElementById("button")
+
+button.addEventListener("click", function(event) {
+  event.preventDefault()
+
+  var marsFactsArray = [
+    
+  ]
+})
