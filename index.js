@@ -5,8 +5,7 @@ const ASTRO_APP_SECRET =
 const authString = btoa(`${ASTRO_APP_ID}:${ASTRO_APP_SECRET}`)
 const date = document.getElementById('date')
 const form = document.getElementById('form')
-const marsImage = document.getElementById('mars-img')
-const marsCard = document.getElementById('mars-card')
+const marsGallery = document.getElementById('mars-gallery')
 const moonPhase = document.getElementById('moon-phase')
 const moonPhaseDiv = document.getElementById('moon-phase-div')
 let chosenDate
@@ -23,38 +22,108 @@ form.onsubmit = (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      let randomNum = Math.floor(Math.random() * data.photos.length)
-      let photo = data.photos[randomNum].img_src
-      marsImage.setAttribute('src', photo)
-      marsCard.classList.remove('hidden')
-      marsCard.classList.add('flex')
+      let photo1 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      let photo2 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      let photo3 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      let photo4 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      let photo5 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      let photo6 =
+        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+      marsGallery.classList.remove('hidden')
+
+      marsGallery.innerHTML = `
+      <h1
+      class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+    >
+      Mars images for ${dayjs(chosenDate).format('M/D/YYYY')}
+    </h1>
+      <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/3 flex-wrap">
+          <div class="w-full p-1 md:p-2">
+            <img
+              alt="gallery"
+              class="block h-full w-full rounded-lg object-cover object-center"
+              src="${photo1}"
+            />
+          </div>
+        </div>
+        <div class="flex w-1/3 flex-wrap">
+        <div class="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="${photo2}"
+          />
+        </div>
+      </div>
+      <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="${photo3}"
+        />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+    <div class="w-full p-1 md:p-2">
+      <img
+        alt="gallery"
+        class="block h-full w-full rounded-lg object-cover object-center"
+        src="${photo4}"
+      />
+    </div>
+  </div>
+  <div class="flex w-1/3 flex-wrap">
+  <div class="w-full p-1 md:p-2">
+    <img
+      alt="gallery"
+      class="block h-full w-full rounded-lg object-cover object-center"
+      src="${photo5}"
+    />
+  </div>
+</div>
+<div class="flex w-1/3 flex-wrap">
+<div class="w-full p-1 md:p-2">
+  <img
+    alt="gallery"
+    class="block h-full w-full rounded-lg object-cover object-center"
+    src="${photo6}"
+  />
+</div>
+</div>
+</div>
+          `
     })
+  window.scrollTo(0, document.body.scrollHeight)
 
   getMoonPhase()
 }
 
-fetch(apiUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((data, i) => {
-      console.log(data)
-    })
-  })
-  .catch((error) => {
-    console.log('Error:', error)
+const getMoonPhase = async () => {
+  const data = `{"style":{"moonStyle":"default","backgroundStyle":"stars","backgroundColor":"#000000","headingColor":"#ffffff","textColor":"#e84a4a"},"observer":{"latitude":33.775867,"longitude":-84.39733,"date":"${
+    chosenDate ? chosenDate : new Date().toISOString()
+  }"},"view":{"type":"landscape-simple","parameters":{}}}`
+
+  const xhr = new XMLHttpRequest()
+  xhr.withCredentials = true
+
+  xhr.addEventListener('readystatechange', function () {
+    if (this.readyState === this.DONE) {
+      moonPhaseImgUrl = this.responseText
+        .match(/\bhttps?:\/\/\S+/gi)[0]
+        .replace('"}}', '')
+    }
+    moonPhase.setAttribute('src', moonPhaseImgUrl)
+    moonPhaseDiv.classList.remove('hidden')
   })
 
   xhr.open('POST', 'https://api.astronomyapi.com/api/v2/studio/moon-phase')
   xhr.setRequestHeader('Authorization', `Basic ${authString}`)
 
   xhr.send(data)
-
-var button = document.getElementById("button")
-
-button.addEventListener("click", function(event) {
-  event.preventDefault()
-
-  var marsFactsArray = [
-    
-  ]
-})
