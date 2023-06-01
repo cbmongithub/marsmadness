@@ -9,54 +9,64 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="flex w-full justify-center items-center mt-10">
-        <form id="form">
-          <input class="datepicker py-1.5 px-4 rounded" type="date" id="date" />
-          <button
-            type="submit"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Submit
-          </button>
-        </form>
+    <nav
+      class="flex flex-row items-center justify-center p-6"
+      style="height: 6vh"
+    >
+      <h1 class="text-xl text-black font-bold">MarsMadness</h1>
+    </nav>
+    <div
+      class="relative overflow-hidden bg-no-repeat bg-cover"
+      style="
+        background-position: 50%;
+        background-image: url('https://wallpaperaccess.com/full/1747390.jpg');
+        height: 94vh;
+      "
+    >
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.75)"
+      >
+        <div class="flex justify-center items-center h-full">
+          <div class="text-center text-white px-6 md:px-12">
+            <h1
+              class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
+            >
+              Search any day <br /><span>for info on Mars</span>
+            </h1>
+            <div class="flex w-full justify-center items-center mt-10">
+              <form id="form">
+                <input
+                  class="datepicker py-1.5 px-4 rounded"
+                  type="date"
+                  id="date"
+                />
+                <button
+                  type="submit"
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
-      id="mars-card"
+      id="mars-gallery"
+      class="hidden container mx-auto px-5 py-2 lg:px-32 lg:pt-12"
+    ></div>
+
+    <div
+      id="moon-phase-div"
       class="hidden flex flex-row justify-center items-center mt-10"
     >
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img
-          id="mars-img"
-          class="w-full h-60 object-cover object-center"
-          alt="Sunset in the mountains"
-        />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#photography</span
-          >
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#travel</span
-          >
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >#winter</span
-          >
-        </div>
-      </div>
-    </div>
-    <div id='moon-phase-div' class="hidden flex flex-row justify-center items-center mt-10">
-      <img alt="Moon phase image" class="rounded-md shadow-lg" id="moon-phase" />
+      <img
+        alt="Moon phase image"
+        class="rounded-md shadow-lg"
+        id="moon-phase"
+      />
     </div>
 
     <script src="index.js"></script>
