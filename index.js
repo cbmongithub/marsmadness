@@ -115,11 +115,9 @@ const getMoonPhase = async () => {
 
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
-      moonPhaseImgUrl = this.responseText
-        .match(/\bhttps?:\/\/\S+/gi)[0]
-        .replace('"}}', '')
+      moonPhaseImgUrl = JSON.parse(this.responseText)
+      moonPhase.setAttribute('src', moonPhaseImgUrl.data.imageUrl)
     }
-    moonPhase.setAttribute('src', moonPhaseImgUrl)
     moonPhaseDiv.classList.remove('hidden')
   })
 
