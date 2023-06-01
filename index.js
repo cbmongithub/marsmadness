@@ -37,6 +37,11 @@ form.onsubmit = (e) => {
       marsGallery.classList.remove('hidden')
 
       marsGallery.innerHTML = `
+      <h1
+      class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+    >
+      Mars images for ${dayjs(chosenDate).format('M/D/YYYY')}
+    </h1>
       <div class="-m-1 flex flex-wrap md:-m-2">
           <div class="flex w-1/3 flex-wrap">
           <div class="w-full p-1 md:p-2">
