@@ -115,9 +115,11 @@ const getMoonPhase = async () => {
 
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
-      moonPhaseImgUrl = JSON.parse(this.responseText)
-      moonPhase.setAttribute('src', moonPhaseImgUrl.data.imageUrl)
+      moonPhaseImgUrl = this.responseText
+        .match(/\bhttps?:\/\/\S+/gi)[0]
+        .replace('"}}', '')
     }
+    moonPhase.setAttribute('src', moonPhaseImgUrl)
     moonPhaseDiv.classList.remove('hidden')
   })
 
@@ -125,4 +127,3 @@ const getMoonPhase = async () => {
   xhr.setRequestHeader('Authorization', `Basic ${authString}`)
 
   xhr.send(data)
-}
