@@ -47,8 +47,9 @@ form.onsubmit = (e) => {
           <div class="w-full p-1 md:p-2">
             <img
               alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center"
+              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
               src="${photo1}"
+              onclick="console.log(this)"
             />
           </div>
         </div>
@@ -56,7 +57,7 @@ form.onsubmit = (e) => {
         <div class="w-full p-1 md:p-2">
           <img
             alt="gallery"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
             src="${photo2}"
           />
         </div>
@@ -65,7 +66,7 @@ form.onsubmit = (e) => {
       <div class="w-full p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
+          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
           src="${photo3}"
         />
       </div>
@@ -74,7 +75,7 @@ form.onsubmit = (e) => {
     <div class="w-full p-1 md:p-2">
       <img
         alt="gallery"
-        class="block h-full w-full rounded-lg object-cover object-center"
+        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
         src="${photo4}"
       />
     </div>
@@ -83,7 +84,7 @@ form.onsubmit = (e) => {
   <div class="w-full p-1 md:p-2">
     <img
       alt="gallery"
-      class="block h-full w-full rounded-lg object-cover object-center"
+      class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
       src="${photo5}"
     />
   </div>
@@ -92,7 +93,7 @@ form.onsubmit = (e) => {
 <div class="w-full p-1 md:p-2">
   <img
     alt="gallery"
-    class="block h-full w-full rounded-lg object-cover object-center"
+    class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
     src="${photo6}"
   />
 </div>
