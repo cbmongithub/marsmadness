@@ -9,6 +9,7 @@ const marsGallery = document.getElementById('mars-gallery')
 const moonPhase = document.getElementById('moon-phase')
 let chosenDate
 let moonPhaseImgUrl
+let today = dayjs().format('YYYY-MM-DD')
 
 date.onchange = (e) => {
   chosenDate = e.target.value
@@ -99,6 +100,14 @@ form.onsubmit = (e) => {
 </div>
 </div>
           `
+      } else if (chosenDate == today) {
+        marsGallery.classList.remove('hidden')
+        marsGallery.innerHTML = `
+        <h1
+        class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+      >
+        No mars images found for today :(
+      </h1>`
       } else {
         marsGallery.classList.remove('hidden')
         marsGallery.innerHTML = `
@@ -109,8 +118,9 @@ form.onsubmit = (e) => {
       </h1>`
       }
     })
-  window.scrollTo(0, document.body.scrollHeight)
-
+    .then(() => {
+      marsGallery.scrollIntoView()
+    })
   getMoonPhase()
 }
 
