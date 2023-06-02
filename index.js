@@ -46,9 +46,10 @@ form.onsubmit = (e) => {
       <div class="-m-1 flex flex-wrap md:-m-2">
           <div class="flex w-full sm:w-1/3 flex-wrap">
           <div class="w-full p-1 md:p-2">
+            <p>hello</p>
             <img
               alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
               src="${photo1}"
               onclick="console.log(this)"
             />
@@ -58,7 +59,7 @@ form.onsubmit = (e) => {
         <div class="w-full p-1 md:p-2">
           <img
             alt="gallery"
-            class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+            class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
             src="${photo2}"
           />
         </div>
@@ -67,16 +68,16 @@ form.onsubmit = (e) => {
       <div class="w-full p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
           src="${photo3}"
         />
       </div>
     </div>
-    <div class="flex w-full sm:w-1/3 flex-wrap">
-    <div class="w-full p-1 md:p-2">
+    <div class="flex w-1/3 flex-wrap">
+    <div class="w-full p-1 md:p-2 ">
       <img
         alt="gallery"
-        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
         src="${photo4}"
       />
     </div>
@@ -85,7 +86,7 @@ form.onsubmit = (e) => {
   <div class="w-full p-1 md:p-2">
     <img
       alt="gallery"
-      class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+      class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
       src="${photo5}"
     />
   </div>
@@ -94,7 +95,7 @@ form.onsubmit = (e) => {
 <div class="w-full p-1 md:p-2">
   <img
     alt="gallery"
-    class="block h-full w-full rounded-lg object-cover object-center hover:opacity-50 cursor-pointer"
+    class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
     src="${photo6}"
   />
 </div>
@@ -150,3 +151,11 @@ const getMoonPhase = async () => {
 
   xhr.send(data)
 }
+
+marsFactsArray = [
+  'Mars is the fourth planet from the sun',
+  "Mars' nickname is the Red Planet",
+  'Mars is the second smallest planet in the solar system',
+  "Mars' temperatures range from -166F - 95F",
+  'Mars has two small moons named Phobos and Deimos',
+]
