@@ -44,61 +44,78 @@ form.onsubmit = (e) => {
     </h1>
       <div class="-m-1 flex flex-wrap md:-m-2">
           <div class="flex w-1/3 flex-wrap">
-          <div class="w-full p-1 md:p-2">
-            <p>hello</p>
-            <img
-              alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-              src="${photo1}"
-            />
+            <div class="w-full p-1 md:p-2 container">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+                src="${photo1}"
+             />
+              <div class="content">
+                <div class="text">Mars is the fourth planet from the sun</div>
+              </div>
           </div>
         </div>
         <div class="flex w-1/3 flex-wrap">
-        <div class="w-full p-1 md:p-2">
+        <div class="w-full p-1 md:p-2 container">
           <img
             alt="gallery"
             class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
             src="${photo2}"
           />
+            <div class="content">
+              <div class="text">Mars' nickname is the Red Planet</div>
+            </div>
         </div>
       </div>
       <div class="flex w-1/3 flex-wrap">
-      <div class="w-full p-1 md:p-2">
+      <div class="w-full p-1 md:p-2 container">
         <img
           alt="gallery"
           class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
           src="${photo3}"
         />
+          <div class="content">
+            <div class="text">Mars is the second smallest planet in the solar system</div>
+          </div>
       </div>
     </div>
     <div class="flex w-1/3 flex-wrap">
-    <div class="w-full p-1 md:p-2 ">
+    <div class="w-full p-1 md:p-2 container">
       <img
         alt="gallery"
         class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
         src="${photo4}"
       />
+        <div class="content">
+          <div class="text">Mars' temperatures range from -166°F - 95°F">Fact</div>
+        </div>
     </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+    <div class="w-full p-1 md:p-2 container">
+      <img
+        alt="gallery"
+        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+        src="${photo5}"
+      />
+        <div class="content">
+          <div class="text">Mars has two small moons named Phobos and Deimos</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+    <div class="w-full p-1 md:p-2 container">
+      <img
+        alt="gallery"
+        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+        src="${photo6}"
+      />
+        <div class="content">
+          <div class="text">MARS</div>
+        </div>
   </div>
-  <div class="flex w-1/3 flex-wrap">
-  <div class="w-full p-1 md:p-2">
-    <img
-      alt="gallery"
-      class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-      src="${photo5}"
-    />
   </div>
-</div>
-<div class="flex w-1/3 flex-wrap">
-<div class="w-full p-1 md:p-2">
-  <img
-    alt="gallery"
-    class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-    src="${photo6}"
-  />
-</div>
-</div>
-</div>
+  </div>
           `
     })
   window.scrollTo(0, document.body.scrollHeight)
