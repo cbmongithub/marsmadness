@@ -22,7 +22,6 @@ form.onsubmit = (e) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.photos.length !== 0) {
-        console.log(true)
         let photo1 =
           data.photos[Math.floor(Math.random() * data.photos.length)].img_src
         let photo2 =
@@ -46,12 +45,10 @@ form.onsubmit = (e) => {
       <div class="-m-1 flex flex-wrap md:-m-2">
           <div class="flex w-full sm:w-1/3 flex-wrap">
           <div class="w-full p-1 md:p-2">
-            <p>hello</p>
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
               src="${photo1}"
-              onclick="console.log(this)"
             />
           </div>
         </div>
