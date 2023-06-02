@@ -64,7 +64,7 @@ form.onsubmit = (e) => {
             src="${photo2}"
           />
             <div class="content">
-              <div class="text">Mars' nickname is the Red Planet</div>
+              <div class="text">Mars' nickname is "the Red Planet"</div>
             </div>
         </div>
       </div>
@@ -112,7 +112,7 @@ form.onsubmit = (e) => {
         src="${photo6}"
       />
         <div class="content">
-          <div class="text">MARS</div>
+          <div class="text">There are currently 5 rovers on mars and their names are: Sojourner, Spirit and Opportunity, Curiosity, and Perseverance.</div>
         </div>
   </div>
   </div>
@@ -168,10 +168,3 @@ const getMoonPhase = async () => {
   xhr.send(data)
 }
 
-marsFactsArray = [
-  'Mars is the fourth planet from the sun',
-  "Mars' nickname is the Red Planet",
-  'Mars is the second smallest planet in the solar system',
-  "Mars' temperatures range from -166F - 95F",
-  'Mars has two small moons named Phobos and Deimos',
-]
