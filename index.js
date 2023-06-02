@@ -7,7 +7,6 @@ const date = document.getElementById('date')
 const form = document.getElementById('form')
 const marsGallery = document.getElementById('mars-gallery')
 const moonPhase = document.getElementById('moon-phase')
-const moonPhaseDiv = document.getElementById('moon-phase-div')
 let chosenDate
 let moonPhaseImgUrl
 
@@ -22,21 +21,23 @@ form.onsubmit = (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      let photo1 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo2 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo3 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo4 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo5 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo6 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      marsGallery.classList.remove('hidden')
+      if (data.photos.length !== 0) {
+        console.log(true)
+        let photo1 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo2 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo3 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo4 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo5 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo6 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        marsGallery.classList.remove('hidden')
 
-      marsGallery.innerHTML = `
+        marsGallery.innerHTML = `
       <h1
       class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
     >
@@ -117,6 +118,15 @@ form.onsubmit = (e) => {
   </div>
   </div>
           `
+      } else {
+        marsGallery.classList.remove('hidden')
+        marsGallery.innerHTML = `
+        <h1
+        class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+      >
+        No mars images found on ${dayjs(chosenDate).format('M/D/YYYY')} :(
+      </h1>`
+      }
     })
   window.scrollTo(0, document.body.scrollHeight)
 
@@ -133,12 +143,23 @@ const getMoonPhase = async () => {
 
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
-      moonPhaseImgUrl = this.responseText
-        .match(/\bhttps?:\/\/\S+/gi)[0]
-        .replace('"}}', '')
+      moonPhaseImgUrl = JSON.parse(this.responseText)
+      moonPhase.classList.remove('hidden')
+      moonPhase.innerHTML = `
+      <div class="w-[400px]">
+      <h1 class="text-4xl text-center font-bold italic mb-12 my-3">
+        Here is the moon phase for ${dayjs(chosenDate).format('M/D/YYYY')}:
+      </h1>
+    <img
+      alt="Moon phase image"
+      class="rounded-md shadow-lg mb-10"
+      id="moon-phase"
+      width="600"
+      src="${moonPhaseImgUrl.data.imageUrl}"
+    />
+    </div>
+    `
     }
-    moonPhase.setAttribute('src', moonPhaseImgUrl)
-    moonPhaseDiv.classList.remove('hidden')
   })
 
   xhr.open('POST', 'https://api.astronomyapi.com/api/v2/studio/moon-phase')
@@ -147,11 +168,10 @@ const getMoonPhase = async () => {
   xhr.send(data)
 }
 
-
-    marsFactsArray = [
-      "Mars is the fourth planet from the sun",
-      "Mars' nickname is the Red Planet",
-      "Mars is the second smallest planet in the solar system",
-      "Mars' temperatures range from -166F - 95F",
-      "Mars has two small moons named Phobos and Deimos"
-    ]
+marsFactsArray = [
+  'Mars is the fourth planet from the sun',
+  "Mars' nickname is the Red Planet",
+  'Mars is the second smallest planet in the solar system',
+  "Mars' temperatures range from -166F - 95F",
+  'Mars has two small moons named Phobos and Deimos',
+]
