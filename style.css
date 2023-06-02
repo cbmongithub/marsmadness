@@ -11,3 +11,9 @@
   color: #000;
   cursor: auto;
 }
+
+
+.header {
+  background-color: black;
+  /* background-image: url("https://media.istockphoto.com/id/1053794310/photo/mars-high-resolution-image-mars-is-a-planet-of-the-solar-system-sunrise-with-lens-flare.webp?b=1&s=170667a&w=0&k=20&c=efcjBwl3WIIWHsxwhASVruPdSK2WaGdq38HK2Odmchg="); */
+}

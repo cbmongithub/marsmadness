@@ -152,6 +152,58 @@ const getMoonPhase = async () => {
   xhr.send(data)
 }
 
+
+    marsFactsArray = [
+      "Mars is the fourth planet from the sun",
+      "Mars' nickname is the Red Planet",
+      "Mars is the second smallest planet in the solar system",
+      "Mars' temperatures range from -166F - 95F",
+      "Mars has two small moons named Phobos and Deimos"
+    ]
+
+
+   
+ const moonFacts = [
+    "Did you know the Moon moves away from Earth at a rate of 3.78cm per year?",
+    "Did you know that Moon Dust smells like spent gunpowder?",
+    "Did you know that Surface Temperatures on the can reach boiling point?",
+    "Did you know the Moon is in a 'captured rotation' with the Earth, meaning we always see the same side?",
+    "Did you know scientists have discovered water on the Moon?",
+    "Did you know it takes 27.3 days for the Moon to travel all the way around the Earth?",
+    "Did you know it would take around 400,000 moons to match the brightness of the Sun?",
+    "Did you know the Moon has quakes just like the Earth does?",
+    "Did you know the Moon is lemon-shaped?",
+    "Did you know there is currently over 70 spacecraft vehicles on the moon?",
+    "Did you know the Moon is about 32 Earths away from us?",
+    "Did you know despite contrary belief, the Moon Does indeed have an atmosphere, albeit very thin?"
+  
+]    
+
+const moonfactoidbox = document.getElementById("moonFact")
+moonfactoidbox.style.maxHeight= "4rem";
+
+function adjustTextBoxSize() {
+  moonfactoidbox.style.width = 'auto';
+  moonfactoidbox.style.width = `${moonfactoidbox.offsetWidth}px`;
+}
+
+moonPhase.addEventListener('mouseover', (e) => {
+  if (e.target.tagName === 'IMG') {
+    const randomFact = moonFacts[Math.floor(Math.random() * moonFacts.length)];
+    moonfactoidbox.innerHTML = randomFact;
+    moonfactoidbox.classList.remove('hidden');
+    moonfactoidbox.style.top = `${e.clientY}px`;
+    moonfactoidbox.style.left = `${e.clientX}px`;
+    adjustTextBoxSize();
+  }
+});
+
+moonPhase.addEventListener('mouseout', (e) => {
+  if (e.target.tagName === 'IMG') {
+    moonfactoidbox.classList.add('hidden');
+  }
+});
+
 marsFactsArray = [
   'Mars is the fourth planet from the sun',
   "Mars' nickname is the Red Planet",
@@ -159,3 +211,4 @@ marsFactsArray = [
   "Mars' temperatures range from -166F - 95F",
   'Mars has two small moons named Phobos and Deimos',
 ]
+
