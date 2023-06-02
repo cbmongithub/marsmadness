@@ -63,13 +63,14 @@
 
     <div
       id="moon-phase-div"
-      class="hidden flex flex-row justify-center items-center mt-10"
+      class="hidden flex flex-row justify-center items-center mt-10 static"
     >
       <img
         alt="Moon phase image"
         class="rounded-md shadow-lg mb-10"
         id="moon-phase"
       />
+      <div id="moonFact" class="hidden fixed bottom-0 left-1/2, transform, -translate-x-1 bg-black bg-opacity-80 text-white p-2 text-center rounded-md w-48 pointer-events-none z-50"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="index.js"></script>
