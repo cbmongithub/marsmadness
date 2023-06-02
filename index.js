@@ -22,28 +22,30 @@ form.onsubmit = (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      let photo1 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo2 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo3 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo4 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo5 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      let photo6 =
-        data.photos[Math.floor(Math.random() * data.photos.length)].img_src
-      marsGallery.classList.remove('hidden')
+      console.log(data.photos)
+      if (data.photos.length !== 0) {
+        let photo1 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo2 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo3 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo4 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo5 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        let photo6 =
+          data.photos[Math.floor(Math.random() * data.photos.length)].img_src
+        marsGallery.classList.remove('hidden')
 
-      marsGallery.innerHTML = `
+        marsGallery.innerHTML = `
       <h1
       class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
     >
       Mars images for ${dayjs(chosenDate).format('M/D/YYYY')}
     </h1>
       <div class="-m-1 flex flex-wrap md:-m-2">
-          <div class="flex w-1/3 flex-wrap">
+          <div class="flex w-full sm:w-1/3 flex-wrap">
           <div class="w-full p-1 md:p-2">
             <img
               alt="gallery"
@@ -53,7 +55,7 @@ form.onsubmit = (e) => {
             />
           </div>
         </div>
-        <div class="flex w-1/3 flex-wrap">
+        <div class="flex w-full sm:w-1/3 flex-wrap">
         <div class="w-full p-1 md:p-2">
           <img
             alt="gallery"
@@ -62,7 +64,7 @@ form.onsubmit = (e) => {
           />
         </div>
       </div>
-      <div class="flex w-1/3 flex-wrap">
+      <div class="flex w-full sm:w-1/3 flex-wrap">
       <div class="w-full p-1 md:p-2">
         <img
           alt="gallery"
@@ -71,7 +73,7 @@ form.onsubmit = (e) => {
         />
       </div>
     </div>
-    <div class="flex w-1/3 flex-wrap">
+    <div class="flex w-full sm:w-1/3 flex-wrap">
     <div class="w-full p-1 md:p-2">
       <img
         alt="gallery"
@@ -80,7 +82,7 @@ form.onsubmit = (e) => {
       />
     </div>
   </div>
-  <div class="flex w-1/3 flex-wrap">
+  <div class="flex w-full sm:w-1/3 flex-wrap">
   <div class="w-full p-1 md:p-2">
     <img
       alt="gallery"
@@ -89,7 +91,7 @@ form.onsubmit = (e) => {
     />
   </div>
 </div>
-<div class="flex w-1/3 flex-wrap">
+<div class="flex w-full sm:w-1/3 flex-wrap">
 <div class="w-full p-1 md:p-2">
   <img
     alt="gallery"
@@ -100,6 +102,14 @@ form.onsubmit = (e) => {
 </div>
 </div>
           `
+      } else {
+        marsGallery.innerHTML = `
+        <h1
+        class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+      >
+        No images found :(
+      </h1>`
+      }
     })
   window.scrollTo(0, document.body.scrollHeight)
 
