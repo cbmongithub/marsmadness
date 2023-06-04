@@ -112,7 +112,7 @@ form.onsubmit = (e) => {
         src="${photo6}"
       />
         <div class="content">
-          <div class="text">There are currently 5 rovers on mars and their names are: Sojourner, Spirit and Opportunity, Curiosity, and Perseverance.</div>
+          <div class="text">Mars is named after ther Roman god of war.</div>
         </div>
   </div>
   </div>
