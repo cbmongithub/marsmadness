@@ -167,17 +167,6 @@ const getMoonPhase = async () => {
 
   xhr.send(data)
 }
-
-
-    marsFactsArray = [
-      "Mars is the fourth planet from the sun",
-      "Mars' nickname is the Red Planet",
-      "Mars is the second smallest planet in the solar system",
-      "Mars' temperatures range from -166F - 95F",
-      "Mars has two small moons named Phobos and Deimos"
-    ]
-
-
    
  const moonFacts = [
     "Did you know the Moon moves away from Earth at a rate of 3.78cm per year?",
@@ -219,12 +208,3 @@ moonPhase.addEventListener('mouseout', (e) => {
     moonfactoidbox.classList.add('hidden');
   }
 });
-
-marsFactsArray = [
-  'Mars is the fourth planet from the sun',
-  "Mars' nickname is the Red Planet",
-  'Mars is the second smallest planet in the solar system',
-  "Mars' temperatures range from -166F - 95F",
-  'Mars has two small moons named Phobos and Deimos',
-]
-
