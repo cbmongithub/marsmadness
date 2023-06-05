@@ -141,6 +141,7 @@ const getMoonPhase = async () => {
     if (this.readyState === this.DONE) {
       moonPhaseImgUrl = JSON.parse(this.responseText);
       moonPhase.classList.remove("hidden");
+      console.log(moonPhaseImgUrl.data.imageUrl)
       moonPhase.innerHTML = `
       <div class="w-[400px]">
       <h1 class="text-4xl text-center font-bold italic mb-12 my-3">
