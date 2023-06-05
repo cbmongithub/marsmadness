@@ -2,7 +2,7 @@
 
 MarsMadness was created to allow anyone to get an actual photo from the Mars rover on a date of their choice. The photo is selected randomly from all of the available photos from all of the available cameras on the rover that were taken on that day. This is accomplished using NASA's free Mars Rover Photos API. In addition to this you'll be given a fun fact about the planet. This provides a simple to use and fun way to learn about our neighbor planet - where we may be sending people in the near future!
 
-In addition to the information about mars we wanted to see what other API's were out there that could provide information about other objects in our solar system that would allow us to line up the dates. We were able to find a free API that would give you an image of the moon's phase for that day. We chose to follow along with the theme and present the user 
+In addition to the information about mars we wanted to see what other API's were out there that could provide information about other objects in our solar system that would allow us to line up the dates. We were able to find a free API that would give you an image of the moon's phase for that day. We chose to follow along with the theme and present the user.
 
 ## Table of Contents
 
@@ -37,6 +37,15 @@ For our second API we used a free moon phase API. For more information on how to
 To view the Project's source code visit the repository on Github: https://github.com/christianbmartinez/marsmadness
 
 Try the app out yourself on Github Pages:
+
+## Sources
+
+this was a collaborative project built by:
+
+* [Christian Martinez](https://github.com/christianbmartinez)
+* [Brandon Mountan](https://github.com/brandonmountan)
+* [Collin Haws](https://github.com/CHawsCoding)
+* [Nate Keste](https://github.com/imdawizard)
 
 
 
