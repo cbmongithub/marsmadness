@@ -9,9 +9,8 @@ In addition to the information about mars we wanted to see what other API's were
 - [Project Description](#project-description)
 - [Features](#features)
 - [APIs](#APIs)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Deployed Application](#deployed-application)
+- [Sources](#Sources)
 
 ## Project Description
 
@@ -46,6 +45,11 @@ this was a collaborative project built by:
 * [Brandon Mountan](https://github.com/brandonmountan)
 * [Collin Haws](https://github.com/CHawsCoding)
 * [Nate Keste](https://github.com/imdawizard)
+
+some external sources we used to create the code:
+
+* [MDN docs to help with the facts displaying over the mars images](https://www.w3docs.com/snippets/css/how-to-display-an-animated-text-over-an-image-on-hover-using-only-css3.html)
+
 
 
 
