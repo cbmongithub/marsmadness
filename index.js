@@ -94,7 +94,7 @@ form.onsubmit = (e) => {
   <img
     alt="gallery"
     class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-    src="${photo6}"
+    src="${photo6}" 
   />
 </div>
 </div>
@@ -108,6 +108,22 @@ form.onsubmit = (e) => {
       >
         No mars images found for today :(
       </h1>`
+      } else if (dayjs(chosenDate).isAfter(today)) {
+        marsGallery.classList.remove('hidden')
+        marsGallery.innerHTML = `
+        <div class="flex flex-col justify-center items-center">
+        <h1
+        class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
+      >
+        Cannot fetch images from the future :/
+        <img
+        alt="gallery"
+        class="h-1/2 w-1/2 rounded-lg mx-auto m-20"
+        src="https://media2.giphy.com/media/1BXa2alBjrCXC/giphy.gif?cid=ecf05e4714z1brlcwmqvxrhg3rbza6ul0vg0nzghdsfkmrdr&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+      />
+
+      </h1>
+      </div>`
       } else {
         marsGallery.classList.remove('hidden')
         marsGallery.innerHTML = `
@@ -115,6 +131,11 @@ form.onsubmit = (e) => {
         class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
       >
         No mars images found on ${dayjs(chosenDate).format('M/D/YYYY')} :(
+          <img
+          alt="gallery"
+          class="h-1/2 w-1/2 rounded-lg mx-auto m-20"
+          src="https://media2.giphy.com/media/1BXa2alBjrCXC/giphy.gif?cid=ecf05e4714z1brlcwmqvxrhg3rbza6ul0vg0nzghdsfkmrdr&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+        />
       </h1>`
       }
     })
@@ -137,14 +158,13 @@ const getMoonPhase = async () => {
       moonPhaseImgUrl = JSON.parse(this.responseText)
       moonPhase.classList.remove('hidden')
       moonPhase.innerHTML = `
-      <div class="w-[400px]">
+      <div class="flex flex-col justify-between items-center">
       <h1 class="text-4xl text-center font-bold italic mb-12 my-3">
         Here is the moon phase for ${dayjs(chosenDate).format('M/D/YYYY')}:
       </h1>
     <img
       alt="Moon phase image"
-      class="rounded-md shadow-lg mb-10"
-      id="moon-phase"
+      class="rounded-md shadow-lg mb-10 h-1/2 w-1/2"
       width="600"
       src="${moonPhaseImgUrl.data.imageUrl}"
     />
