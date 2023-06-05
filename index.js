@@ -38,11 +38,9 @@ form.onsubmit = (e) => {
         marsGallery.classList.remove("hidden");
 
         marsGallery.innerHTML = `
-      <h1
-      class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
-    >
-      Mars images for ${dayjs(chosenDate).format("M/D/YYYY")}
-    </h1>
+      <h1 class="text-4xl text-center font-bold tracking-tight mb-12 my-3">
+        Mars images for ${dayjs(chosenDate).format("M/D/YYYY")}
+      </h1>
       <div class="-m-1 flex flex-wrap md:-m-2">
         <div class="flex w-1/3 flex-wrap">
           <div class="w-full p-1 md:p-2 container">
@@ -69,63 +67,61 @@ form.onsubmit = (e) => {
           </div>
         </div>
       <div class="flex w-1/3 flex-wrap">
+        <div class="w-full p-1 md:p-2 container">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+            src="${photo3}"
+          />
+            <div class="content">
+              <div class="text">Mars is the second smallest planet in the solar system</div>
+            </div>
+        </div>
+      </div>
+    <div class="flex w-1/3 flex-wrap">
       <div class="w-full p-1 md:p-2 container">
         <img
           alt="gallery"
           class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-          src="${photo3}"
+          src="${photo4}"
         />
           <div class="content">
-            <div class="text">Mars is the second smallest planet in the solar system</div>
+            <div class="text">Mars' temperatures range from -166°F - 95°F"</div>
+          </div>
+      </div>
+      </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2 container">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+          src="${photo5}"
+        />
+          <div class="content">
+            <div class="text">Mars has two small moons named Phobos and Deimos</div>
           </div>
       </div>
     </div>
     <div class="flex w-1/3 flex-wrap">
-    <div class="w-full p-1 md:p-2 container">
-      <img
-        alt="gallery"
-        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-        src="${photo4}"
-      />
-        <div class="content">
-          <div class="text">Mars' temperatures range from -166°F - 95°F"</div>
-        </div>
+      <div class="w-full p-1 md:p-2 container">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+          src="${photo6}"
+        />
+          <div class="content">
+            <div class="text">Mars is named after ther Roman god of war.</div>
+          </div>
+      </div>
     </div>
-    </div>
-    <div class="flex w-1/3 flex-wrap">
-    <div class="w-full p-1 md:p-2 container">
-      <img
-        alt="gallery"
-        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-        src="${photo5}"
-      />
-        <div class="content">
-          <div class="text">Mars has two small moons named Phobos and Deimos</div>
-        </div>
-    </div>
-    </div>
-    <div class="flex w-1/3 flex-wrap">
-    <div class="w-full p-1 md:p-2 container">
-      <img
-        alt="gallery"
-        class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
-        src="${photo6}"
-      />
-        <div class="content">
-          <div class="text">Mars is named after ther Roman god of war.</div>
-        </div>
-  </div>
-  </div>
   </div>
           `;
       } else {
         marsGallery.classList.remove("hidden");
         marsGallery.innerHTML = `
-        <h1
-        class="text-4xl text-center font-bold tracking-tight mb-12 my-3"
-      >
-        No mars images found on ${dayjs(chosenDate).format("M/D/YYYY")} :(
-      </h1>`;
+        <h1 class="text-4xl text-center font-bold tracking-tight mb-12 my-3">
+          No mars images found on ${dayjs(chosenDate).format("M/D/YYYY")} :(
+        </h1>`;
       }
     });
   window.scrollTo(0, document.body.scrollHeight);
@@ -167,7 +163,8 @@ const getMoonPhase = async () => {
 
   xhr.send(data)
 }
-   
+
+
  const moonFacts = [
     "Did you know the Moon moves away from Earth at a rate of 3.78cm per year?",
     "Did you know that Moon Dust smells like spent gunpowder?",
