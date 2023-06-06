@@ -7,6 +7,7 @@ const date = document.getElementById('date')
 const form = document.getElementById('form')
 const marsGallery = document.getElementById('mars-gallery')
 const moonPhase = document.getElementById('moon-phase')
+const moonPhaseDiv = document.getElementById('moon-phase-div')
 let chosenDate
 let moonPhaseImgUrl
 
@@ -22,7 +23,6 @@ form.onsubmit = (e) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.photos.length !== 0) {
-        console.log(true)
         let photo1 =
           data.photos[Math.floor(Math.random() * data.photos.length)].img_src
         let photo2 =
@@ -46,7 +46,7 @@ form.onsubmit = (e) => {
           <div class="w-full p-1 md:p-2 container">
             <img
               alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+              class="block h-full w-full rounded-lg object-cover object-center p-3 hover:opacity-25"
               src="${photo1}"
             />
               <div class="content">
@@ -58,7 +58,7 @@ form.onsubmit = (e) => {
           <div class="w-full p-1 md:p-2 container">
             <img
               alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+              class="block h-full w-full rounded-lg object-cover object-center p-3 hover:opacity-25"
               src="${photo2}"
             />
               <div class="content">
@@ -70,7 +70,7 @@ form.onsubmit = (e) => {
         <div class="w-full p-1 md:p-2 container">
           <img
             alt="gallery"
-            class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+            class="block h-full w-full rounded-lg object-cover object-center p-3 hover:opacity-25"
             src="${photo3}"
           />
             <div class="content">
@@ -82,7 +82,7 @@ form.onsubmit = (e) => {
       <div class="w-full p-1 md:p-2 container">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+          class="block h-full w-full rounded-lg object-cover object-center p-3 hover:opacity-25"
           src="${photo4}"
         />
           <div class="content">
@@ -94,7 +94,7 @@ form.onsubmit = (e) => {
       <div class="w-full p-1 md:p-2 container">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+          class="block h-full w-full rounded-lg object-cover object-center p-3 hover:opacity-25"
           src="${photo5}"
         />
           <div class="content">
@@ -106,7 +106,7 @@ form.onsubmit = (e) => {
       <div class="w-full p-1 md:p-2 container">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center hover:opacity-25"
+          class="block h-full w-full object-cover object-center p-3 hover:opacity-25"
           src="${photo6}"
         />
           <div class="content">
@@ -116,8 +116,10 @@ form.onsubmit = (e) => {
     </div>
   </div>
           `
+        getMoonPhase()
       } else {
         marsGallery.classList.remove('hidden')
+        moonPhaseDiv.classList.add('hidden')
         marsGallery.innerHTML = `
         <h1 class="text-4xl text-center font-bold tracking-tight mb-12 my-3">
           No mars images found on ${dayjs(chosenDate).format('M/D/YYYY')} :(
@@ -125,8 +127,6 @@ form.onsubmit = (e) => {
       }
     })
   window.scrollTo(0, document.body.scrollHeight)
-
-  getMoonPhase()
 }
 
 const getMoonPhase = async () => {
@@ -140,21 +140,8 @@ const getMoonPhase = async () => {
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
       moonPhaseImgUrl = JSON.parse(this.responseText)
-      moonPhase.classList.remove('hidden')
-      moonPhase.innerHTML = `
-      <div class="w-[400px]">
-      <h1 class="text-4xl text-center font-bold italic mb-12 my-3">
-        Here is the moon phase for ${dayjs(chosenDate).format('M/D/YYYY')}:
-      </h1>
-    <img
-      alt="Moon phase image"
-      class="rounded-md shadow-lg mb-10"
-      id="moon-phase"
-      width="600"
-      src="${moonPhaseImgUrl.data.imageUrl}"
-    />
-    </div>
-    `
+      moonPhaseDiv.classList.remove('hidden')
+      moonPhase.setAttribute('src', moonPhaseImgUrl.data.imageUrl)
     }
   })
 

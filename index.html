@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <header class ="flex justify-center h-14 bg-gradient-to-r from-sky-500 to-indigo-500 text-white py-4 font-bold absolute inset-x-0 top-0 h-16 ... ">
+  <header
+    class="flex justify-center h-14 bg-gradient-to-r from-sky-500 to-indigo-500 text-white py-4 font-bold absolute inset-x-0 top-0 h-16 ..."
+  >
     <h1>Travel through time and visit MARS and the MOON on any day</h1>
   </header>
   <body>
@@ -65,23 +67,30 @@
       id="moon-phase-div"
       class="hidden flex flex-row justify-center items-center mt-10 static"
     >
-      <img
-        alt="Moon phase image"
-        class="rounded-md shadow-lg mb-10"
-        id="moon-phase"
-      />
-      <div id="moonFact" class="hidden fixed bottom-0 left-1/2, transform, -translate-x-1 bg-black bg-opacity-80 text-white p-2 text-center rounded-md w-48 pointer-events-none z-50"></div>
-    </div>
-      <div
-  </div
-      id="moon-phase"
-      class="hidden flex flex-row w-full sm:columns-2 justify-center items-center mt-10"
-    ></div>
+      <h1 class="text-4xl text-center font-bold italic mb-12 my-3">
+        Here is the moon phase on this day:
+      </h1>
+      <div class="w-[400px] flex flex-row justify-center items-center">
+        <img
+          alt="Moon phase image"
+          class="rounded-md shadow-lg mb-10"
+          id="moon-phase"
+        />
+        <div
+          id="moonFact"
+          class="hidden fixed bottom-0 left-1/2, transform, -translate-x-1 bg-black bg-opacity-80 text-white p-2 text-center rounded-md w-48 pointer-events-none z-50"
+        ></div>
+      </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="index.js"></script>
   </body>
-  <footer class ="flex justify-center bg-blue-500 text-white py-4 font-bold absolute inset-x-0 bottom-0 h-16 ... ">
-    <p>Created by Christian Martinez, Collin Haws, Brandon Mountan, Nate Kester</p>
+  <footer
+    class="flex justify-center bg-blue-500 text-white py-4 font-bold absolute inset-x-0 bottom-0 h-16 ..."
+  >
+    <p>
+      Created by Christian Martinez, Collin Haws, Brandon Mountan, Nate Kester
+    </p>
   </footer>
 </html>
