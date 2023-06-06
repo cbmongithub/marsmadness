@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a47afbd4-449f-40b6-b1aa-111cdb71571f/deploy-status)](https://app.netlify.com/sites/starlit-mermaid-2652a3/deploys)
+![alt text](https://github.com/christianbmartinez/marsmadness/blob/main/marsappimg.jpg)
+
 # MarsMadness
 
 MarsMadness was created to allow anyone to get an actual photo from the Mars rover on a date of their choice. The photo is selected randomly from all of the available photos from all of the available cameras on the rover that were taken on that day. This is accomplished using NASA's free Mars Rover Photos API. In addition to this you'll be given a fun fact about the planet. This provides a simple to use and fun way to learn about our neighbor planet - where we may be sending people in the near future!
