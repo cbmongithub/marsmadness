@@ -14,19 +14,19 @@ In addition to the information about mars we wanted to see what other API's were
 
 ## Project Description
 
-When the user loads the page they are presented with a screen that has a date picker and a background image of the planet mars. The user can then pick a date from now all the way back to the date when we started recieving images from the mars rover, 08/2012. Once the user has selected their date they will then be presented with 6 images from one of the mars rovers that were taken on that day - This is accomplished using the mars rover API. With these images they will be given a fun fact about our neighboring planet. 
+When the user loads the page they are presented with a screen that has a date picker and a background image of the planet mars. The user can then pick a date from now all the way back to the date when we started recieving images from the mars rover, 08/2012. Once the user has selected their date they will then be presented with 6 images from one of the mars rovers that were taken on that day - This is accomplished using the mars rover API. With these images they will be given a fun fact about our neighboring planet.
 
-They will also be presented with an image of what our moon looked like on that same day. We have added a fun fact about our moon to display with the image we pulled from our moon phase API. 
+They will also be presented with an image of what our moon looked like on that same day. We have added a fun fact about our moon to display with the image we pulled from our moon phase API.
 
 ## Features
 
-* A date picker that the user can easily interact with and make a da
+- A date picker that the user can easily interact with and make a request for the chosen date.
 
 ## APIs
 
 For our first API we used NASA's Mars rover image API to find out more about this API and many others that NASA has available please visit: https://api.nasa.gov/
 or
-the API's github page: 
+the API's github page:
 https://github.com/corincerami/mars-photo-api
 
 For our second API we used a free moon phase API. For more information on how to use and access this API visit: https://docs.astronomyapi.com/endpoints/studio/moon-phase
@@ -35,21 +35,13 @@ For our second API we used a free moon phase API. For more information on how to
 
 To view the Project's source code visit the repository on Github: https://github.com/christianbmartinez/marsmadness
 
-Try the app out yourself on Github Pages:
+View the app [live](https://starlit-mermaid-2652a3.netlify.app/)
 
 ## Sources
 
 this was a collaborative project built by:
 
-* [Christian Martinez](https://github.com/christianbmartinez)
-* [Brandon Mountan](https://github.com/brandonmountan)
-* [Collin Haws](https://github.com/CHawsCoding)
-* [Nate Keste](https://github.com/imdawizard)
-
-some external sources we used to create the code:
-
-* [MDN docs to help with the facts displaying over the mars images](https://www.w3docs.com/snippets/css/how-to-display-an-animated-text-over-an-image-on-hover-using-only-css3.html)
-
-
-
-
+- [Christian Martinez](https://github.com/christianbmartinez)
+- [Brandon Mountan](https://github.com/brandonmountan)
+- [Collin Haws](https://github.com/CHawsCoding)
+- [Nate Keste](https://github.com/imdawizard)
