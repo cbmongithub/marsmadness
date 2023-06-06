@@ -154,7 +154,7 @@ const getMoonPhase = async () => {
 const moonFacts = [
   'Did you know the Moon moves away from Earth at a rate of 3.78cm per year?',
   'Did you know that Moon Dust smells like spent gunpowder?',
-  'Did you know that Surface Temperatures on the can reach boiling point?',
+  'Did you know that Surface Temperatures on the Moon can reach boiling point?',
   "Did you know the Moon is in a 'captured rotation' with the Earth, meaning we always see the same side?",
   'Did you know scientists have discovered water on the Moon?',
   'Did you know it takes 27.3 days for the Moon to travel all the way around the Earth?',
