@@ -21,7 +21,7 @@ They will also be presented with an image of what our moon looked like on that s
 
 ## Features
 
-- A date picker that the user can easily interact with and make a da
+- A date picker that the user can easily interact with and make a request for the chosen date.
 
 ## APIs
 
