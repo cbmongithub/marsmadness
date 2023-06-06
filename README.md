@@ -37,6 +37,8 @@ To view the Project's source code visit the repository on Github: https://github
 
 View the app [live](https://starlit-mermaid-2652a3.netlify.app/)
 
+![App Gif](./assets/CleanShot%202023-06-05%20at%2018.26.06.gif)
+
 ## Sources
 
 this was a collaborative project built by:
