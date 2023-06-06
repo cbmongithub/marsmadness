@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a47afbd4-449f-40b6-b1aa-111cdb71571f/deploy-status)](https://app.netlify.com/sites/starlit-mermaid-2652a3/deploys)
 ![alt text](https://github.com/christianbmartinez/marsmadness/blob/main/marsappimg.jpg)
 
 # MarsMadness
